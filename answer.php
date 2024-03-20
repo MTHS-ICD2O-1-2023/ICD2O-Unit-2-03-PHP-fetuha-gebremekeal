@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="description" content="The Address program, in PHP" />
   <meta name="keywords" content="mths, ics2o" />
-  <meta name="author" content="fetuha" />
+  <meta name="author" content="Fetuha" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -27,26 +27,17 @@
     </header>
     <main class="mdl-layout__content">
       <div class="right-image">
-        <img src="./images/street.jpg" />
+        <img src="./images/notebook-animation.svg" alt="laptop image" width="250" />
       </div>
       <div class="page-content-php">
-        <form action="answer.php" method="POST">
-          <p>Street Name</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" street name="street name">
-            <label class="mdl-textfield__label" for="streetname-input">Street Name here ...</label>
-          </div>
-          <br />
-          <p>Street Number</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type=" text" pattern="-?[0-9]*(\.[0-9]+)?" name="Street Number">
-            <label class="mdl-textfield__label" for="streetnumber-input">Street Number here ...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-          <br />
-          <!-- Accent-colored raised button with ripple -->
-          <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
-        </form>
+        <div id="user-info">
+          <?php
+          $streetname = $_POST["street name"];
+          $streetnumber = $_POST["street number"];
+
+          echo "Your address is: " . $streetname . ", Street Number " . $streetnumber . ".";
+          ?>
+        </div>
       </div>
     </main>
   </div>
