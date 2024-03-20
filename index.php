@@ -27,7 +27,7 @@
     </header>
     <main class="mdl-layout__content">
       <div class="right-image">
-        <img src="./images/street.jpg" />
+        <img src="./images/street.jpg" alt="street image"/>
       </div>
       <div class="page-content-php">
         <form action="answer.php" method="POST">
